@@ -1,0 +1,3 @@
+Change Component Designator: OldDesignator=Li-Po NewDesignator=BT1
+Change Component Designator: OldDesignator=Mode NewDesignator=B1
+Added Pin To Net: NetName=3.7V Pin=B1-3

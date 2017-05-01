@@ -1,0 +1,16 @@
+Added Component: Designator=P4(HDR2X3)
+Added Component: Designator=P5(HDR2X3)
+Added Pin To Net: NetName=DATA 4 Pin=P4-1
+Added Pin To Net: NetName=3.7V Pin=P4-2
+Added Pin To Net: NetName=DATA 5 Pin=P4-3
+Added Pin To Net: NetName=DATA 3 Pin=P4-4
+Added Pin To Net: NetName=RESET Pin=P4-5
+Added Pin To Net: NetName=GND Pin=P4-6
+Added Pin To Net: NetName=MISO2 Pin=P5-1
+Added Pin To Net: NetName=3.7V Pin=P5-2
+Added Pin To Net: NetName=SCK2 Pin=P5-3
+Added Pin To Net: NetName=MOSI2 Pin=P5-4
+Added Pin To Net: NetName=RESET Pin=P5-5
+Added Pin To Net: NetName=GND Pin=P5-6
+Added Member To Class: ClassName=Sheet1 Member=Component P4 AVRISP1
+Added Member To Class: ClassName=Sheet1 Member=Component P5 AVRISP2

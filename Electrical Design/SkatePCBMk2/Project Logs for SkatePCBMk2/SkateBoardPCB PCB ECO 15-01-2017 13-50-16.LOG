@@ -1,0 +1,23 @@
+Added Component: Designator=L1(LED0603)
+Added Component: Designator=L2(LED0603)
+Added Component: Designator=R9(1608[0603])
+Added Component: Designator=R10(1608[0603])
+Added Component: Designator=S2(Slide Switch 2.54mm)
+Added Pin To Net: NetName=GND Pin=R9-1
+Added Pin To Net: NetName=GND Pin=R10-1
+Added Pin To Net: NetName=3.7V Pin=S2-1
+Added Pin To Net: NetName=NetL1_1 Pin=L1-1
+Added Pin To Net: NetName=NetL1_1 Pin=L2-1
+Added Pin To Net: NetName=NetL1_1 Pin=S2-2
+Added Net: Name=NetL1_1
+Added Pin To Net: NetName=NetL1_2 Pin=L1-2
+Added Pin To Net: NetName=NetL1_2 Pin=R9-2
+Added Net: Name=NetL1_2
+Added Pin To Net: NetName=NetL2_2 Pin=L2-2
+Added Pin To Net: NetName=NetL2_2 Pin=R10-2
+Added Net: Name=NetL2_2
+Added Member To Class: ClassName=Sheet1 Member=Component L1 LED
+Added Member To Class: ClassName=Sheet1 Member=Component L2 LED
+Added Member To Class: ClassName=Sheet1 Member=Component R9 Res1
+Added Member To Class: ClassName=Sheet1 Member=Component R10 Res1
+Added Member To Class: ClassName=Sheet1 Member=Component S2 Headlights

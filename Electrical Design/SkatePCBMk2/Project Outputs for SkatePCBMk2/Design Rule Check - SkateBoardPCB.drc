@@ -1,0 +1,60 @@
+Protel Design System Design Rule Check
+PCB File : F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc
+Date     : 08/02/2017
+Time     : 00:10:24
+
+WARNING: Multilayer Pads with 0 size Hole found
+   Pad P6-Mount(1038.78mil,1127.205mil) on Multi-Layer
+   Pad P6-Mount(1261.22mil,1127.205mil) on Multi-Layer
+
+Processing Rule : Room Sheet1 (Bounding Region = (3275mil, 1950mil, 6050mil, 3265mil) (InComponentClass('Sheet1'))
+   Violation between Room Definition: Between Small Component L1-LED (325mil,1265mil) on Top Layer And Room Sheet1 (Bounding Region = (3275mil, 1950mil, 6050mil, 3265mil) (InComponentClass('Sheet1')) 
+   Violation between Room Definition: Between Component P6-USB Micro B Connector (1150mil,1246.496mil) on Top Layer And Room Sheet1 (Bounding Region = (3275mil, 1950mil, 6050mil, 3265mil) (InComponentClass('Sheet1')) 
+Rule Violations :2
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0.1mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0.4mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.4mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.984mil) (Max=196.85mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=6mil) (Max=120mil) (Preferred=14mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=6mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Short-Circuit Constraint: Between Pad P6-Mount(1054.528mil,1127.205mil) on Multi-Layer And Pad P6-Mount(1038.78mil,1127.205mil) on Multi-Layer Location : [X = 4329.47mil][Y = 3077.205mil]
+   Violation between Short-Circuit Constraint: Between Pad P6-Mount(1245.472mil,1127.205mil) on Multi-Layer And Pad P6-Mount(1261.22mil,1127.205mil) on Multi-Layer Location : [X = 4520.529mil][Y = 3077.205mil]
+   Violation between Short-Circuit Constraint: Between Pad P6-Mount(1257.284mil,1246.496mil) on Top Layer And Pad P6-Mount(1257.284mil,1246.496mil) on Multi-Layer Location : [X = 4532.283mil][Y = 3196.496mil]
+   Violation between Short-Circuit Constraint: Between Pad P6-Mount(1042.716mil,1246.496mil) on Top Layer And Pad P6-Mount(1042.716mil,1246.496mil) on Multi-Layer Location : [X = 4317.717mil][Y = 3196.496mil]
+Rule Violations :4
+
+
+Violations Detected : 6
+Time Elapsed        : 00:00:00

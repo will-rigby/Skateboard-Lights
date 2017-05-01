@@ -1,0 +1,33 @@
+Change Physical Footprint: Designator=B1 Old Footprint=SMT Tactile Button New Footprint=SMT Tactile Button
+Change Physical Footprint: Designator=BT1 Old Footprint=BAT-2 New Footprint=BAT-2
+Change Physical Footprint: Designator=C1 Old Footprint=1608[0603] New Footprint=1608[0603]
+Change Physical Footprint: Designator=C2 Old Footprint=1608[0603] New Footprint=1608[0603]
+Change Physical Footprint: Designator=C3 Old Footprint=CAPAE9983X105M New Footprint=CAPAE9983X105M
+Change Physical Footprint: Designator=C4 Old Footprint=CAPAE9983X105M New Footprint=CAPAE9983X105M
+Change Physical Footprint: Designator=Charging Old Footprint=LED0603 New Footprint=LED0603
+Change Physical Footprint: Designator=L1 Old Footprint=HDR1X2 New Footprint=HDR1X2
+Change Physical Footprint: Designator=L2 Old Footprint=HDR1X2 New Footprint=HDR1X2
+Change Physical Footprint: Designator=P1 Old Footprint=HDR1X3 New Footprint=HDR1X3
+Change Physical Footprint: Designator=P2 Old Footprint=HDR1X3 New Footprint=HDR1X3
+Change Physical Footprint: Designator=P3 Old Footprint=HDR1X3 New Footprint=HDR1X3
+Change Physical Footprint: Designator=P4 Old Footprint=HDR2X3 New Footprint=HDR2X3
+Change Physical Footprint: Designator=P5 Old Footprint=HDR2X3 New Footprint=HDR2X3
+Change Physical Footprint: Designator=P6 Old Footprint=USB Micro B Connector New Footprint=USB Micro B Connector
+Change Physical Footprint: Designator=P7 Old Footprint=HDR1X5 New Footprint=HDR1X5
+Change Physical Footprint: Designator=Power Old Footprint=LED0603 New Footprint=LED0603
+Change Physical Footprint: Designator=R1 Old Footprint=1608[0603] New Footprint=1608[0603]
+Change Physical Footprint: Designator=R2 Old Footprint=1608[0603] New Footprint=1608[0603]
+Change Physical Footprint: Designator=R3 Old Footprint=1608[0603] New Footprint=1608[0603]
+Change Physical Footprint: Designator=R4 Old Footprint=1608[0603] New Footprint=1608[0603]
+Change Physical Footprint: Designator=R5 Old Footprint=1608[0603] New Footprint=1608[0603]
+Change Physical Footprint: Designator=R6 Old Footprint=1608[0603] New Footprint=1608[0603]
+Change Physical Footprint: Designator=R7 Old Footprint=1608[0603] New Footprint=1608[0603]
+Change Physical Footprint: Designator=R8 Old Footprint=1608[0603] New Footprint=1608[0603]
+Change Physical Footprint: Designator=R9 Old Footprint=1608[0603] New Footprint=1608[0603]
+Change Physical Footprint: Designator=R10 Old Footprint=1608[0603] New Footprint=1608[0603]
+Change Physical Footprint: Designator=S1 Old Footprint=Slide Switch 2.54mm New Footprint=Slide Switch 2.54mm
+Change Physical Footprint: Designator=S2 Old Footprint=Slide Switch 2.54mm New Footprint=Slide Switch 2.54mm
+Change Physical Footprint: Designator=U1 Old Footprint=SOT-23-OT5_N New Footprint=SOT-23-OT5_N
+Change Physical Footprint: Designator=U2 Old Footprint=32A_N New Footprint=32A_N
+Change Physical Footprint: Designator=U3 Old Footprint=32A_N New Footprint=32A_N
+Change Physical Footprint: Designator=USB Old Footprint=LED0603 New Footprint=LED0603

@@ -1,0 +1,368 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD16\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">08/02/2017</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:10:24</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc" class="file"><acronym title="F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc">F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">2</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">6</td></tr>
+</table>
+</td>
+</table><a name="IDDVAQ0EWNCHXPCENYK04C122SXA4JBYWUKTTM1JAFZAXLUYTWCXP"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID51JGJNXKYYAPDK3GLQ2MURUQOCLQPY5TDHKSZIKO2ZLIYMCC4VLC">Multilayer Pads with 0 size Hole found</a></td>
+<td class="column2">2</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">2</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYNG1HZWLSHV5GVQA12MM3J5PND5BSGQ3XFU544GW5NNJ3OMSQ4NH">Room Sheet1 (Bounding Region = (3275mil, 1950mil, 6050mil, 3265mil) (InComponentClass('Sheet1'))</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3F4IKGIIAEKJFXDLDBJFEAS0NODPQCHCTJ4DBUMN2V25BMU5MDOJ">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQYWHBL31QB0IGEX5UJH3SYX4FJPACZASRVAMK1O0DB4VPU0TYZJ">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXJUB3WQIT0SZEMZFJZ54YYZCODUQ2IDC2WFJRMFAMIWJKRB2URKI">Silk to Silk (Clearance=0.1mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZ4VP0TPUU4GKLCLLGFNEVDJGZOJOWH0R3RZGOABDEUQRHG0AO4EN">Silk To Solder Mask (Clearance=0.4mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPPHPFBWAQOZIFMJBNAMPXZHJFILR45BAOONEVBGZSGLFQEMZGM1B">Minimum Solder Mask Sliver (Gap=0.4mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJM2OJ4QWYLBYE1LNAKGX3O3LYBX5DQGCDV5DZMI3F5O3T054P4IP">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDS5MSZTQBUHBPP1CR0SO3RWOWVCEDZQ0NZGDLEFJZZRSHRVQQGQ3B">Hole Size Constraint (Min=0.984mil) (Max=196.85mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0HR3JRDSMI5OKDN52TVCBWKVSKCFBUDRKRQZ4FFD3MAL0X3PO4YK">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDU4BPGKH4CW0JPTS2HDMOMIJUUB4YASK5E02XQTNWKDJ1EUS3PHAP">Width Constraint (Min=6mil) (Max=120mil) (Preferred=14mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUQLKX1YRYKQRJOE4IQGJN5B2CF5131DRIA22NEGIOYNDQXNNVPDJ">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLWQVABKLKII0OFOAPQYUL0ZJ1IMM35N05WW1YRMZULWMWYUDF4PF">Clearance Constraint (Gap=6mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKEIW42XDHNIMDYYAE3DHDTDDJM1ZGFIFI4QBURFN3L5XX10CFQQE">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLBRTHFZS3MXDDWPYT1UE3AROQHG3OWGE4LQN54GH3FGDBUEXNUEF">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">6</td>
+</tr>
+</table><br><a name="IDV5C1GFE3G3HEMFBKO0MYHWYSUNLY1SQNNJGOJHBKXVZIU04X2UOO"><h2>Warnings</h2></a><a name="ID51JGJNXKYYAPDK3GLQ2MURUQOCLQPY5TDHKSZIKO2ZLIYMCC4VLC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Multilayer Pads with 0 size Hole found</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4270.409mil|Location2.X=4357.15mil|Location1.Y=3044.465mil|Location2.Y=3109.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4270.409mil|Location2.X=4357.15mil|Location1.Y=3044.465mil|Location2.Y=3109.945mil|Absolute=True">Pad P6-Mount(1038.78mil,1127.205mil) on Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4492.85mil|Location2.X=4579.591mil|Location1.Y=3044.465mil|Location2.Y=3109.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4492.85mil|Location2.X=4579.591mil|Location1.Y=3044.465mil|Location2.Y=3109.945mil|Absolute=True">Pad P6-Mount(1261.22mil,1127.205mil) on Multi-Layer</acronym></a></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDYNG1HZWLSHV5GVQA12MM3J5PND5BSGQ3XFU544GW5NNJ3OMSQ4NH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Room Sheet1 (Bounding Region = (3275mil, 1950mil, 6050mil, 3265mil) (InComponentClass('Sheet1'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3275mil|Location2.X=6050mil|Location1.Y=1950mil|Location2.Y=3268.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3275mil|Location2.X=6050mil|Location1.Y=1950mil|Location2.Y=3268.937mil|Absolute=True">Room Definition: Between Small Component L1-LED (325mil,1265mil) on Top Layer And Room Sheet1 (Bounding Region = (3275mil, 1950mil, 6050mil, 3265mil) (InComponentClass('Sheet1')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3275mil|Location2.X=6050mil|Location1.Y=1950mil|Location2.Y=3268.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3275mil|Location2.X=6050mil|Location1.Y=1950mil|Location2.Y=3268.425mil|Absolute=True">Room Definition: Between Component P6-USB Micro B Connector (1150mil,1246.496mil) on Top Layer And Room Sheet1 (Bounding Region = (3275mil, 1950mil, 6050mil, 3265mil) (InComponentClass('Sheet1')) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDLBRTHFZS3MXDDWPYT1UE3AROQHG3OWGE4LQN54GH3FGDBUEXNUEF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4294.443mil|Location2.X=4364.498mil|Location1.Y=3042.177mil|Location2.Y=3112.233mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4294.443mil|Location2.X=4364.498mil|Location1.Y=3042.177mil|Location2.Y=3112.233mil|Absolute=True">Short-Circuit Constraint: Between Pad P6-Mount(1054.528mil,1127.205mil) on Multi-Layer And Pad P6-Mount(1038.78mil,1127.205mil) on Multi-Layer Location : [X = 4329.47mil][Y = 3077.205mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4485.502mil|Location2.X=4555.557mil|Location1.Y=3042.177mil|Location2.Y=3112.233mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4485.502mil|Location2.X=4555.557mil|Location1.Y=3042.177mil|Location2.Y=3112.233mil|Absolute=True">Short-Circuit Constraint: Between Pad P6-Mount(1245.472mil,1127.205mil) on Multi-Layer And Pad P6-Mount(1261.22mil,1127.205mil) on Multi-Layer Location : [X = 4520.529mil][Y = 3077.205mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4491.641mil|Location2.X=4572.926mil|Location1.Y=3155.854mil|Location2.Y=3237.139mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4491.641mil|Location2.X=4572.926mil|Location1.Y=3155.854mil|Location2.Y=3237.139mil|Absolute=True">Short-Circuit Constraint: Between Pad P6-Mount(1257.284mil,1246.496mil) on Top Layer And Pad P6-Mount(1257.284mil,1246.496mil) on Multi-Layer Location : [X = 4532.283mil][Y = 3196.496mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4277.074mil|Location2.X=4358.359mil|Location1.Y=3155.854mil|Location2.Y=3237.139mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=F:\Dropbox\Projects\Skateboard\Electrical Design\SkatePCBMk2\SkateBoardPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4277.074mil|Location2.X=4358.359mil|Location1.Y=3155.854mil|Location2.Y=3237.139mil|Absolute=True">Short-Circuit Constraint: Between Pad P6-Mount(1042.716mil,1246.496mil) on Top Layer And Pad P6-Mount(1042.716mil,1246.496mil) on Multi-Layer Location : [X = 4317.717mil][Y = 3196.496mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

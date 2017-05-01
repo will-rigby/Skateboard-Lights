@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: SkateBoardPCB.PcbDoc   15/01/2017  18:36:57
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : SkateBoardPCB.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      13mil (0.33mm)                                            Round             35        PTH        6.04inch (153.45mm)
+T2      30mil (0.762mm)                                           Round             5         PTH        5.15inch (130.72mm)
+T3      35mil (0.899mm)                                           Round             32        PTH        9.22inch (234.15mm)
+T4      41mil (1.049mm)                                           Round             2         PTH        0.19inch (4.85mm)
+T5      47mil (1.199mm)                                           Round             2         PTH        0.21inch (5.45mm)
+T6      126mil (3.2mm)                                            Round             4         PTH        3.62inch (91.86mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              80
+
+Total Processing Time (hh:mm:ss) : 00:00:00

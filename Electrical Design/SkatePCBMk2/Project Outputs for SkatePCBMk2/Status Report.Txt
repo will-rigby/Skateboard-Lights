@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [SkatePCBMk2.PrjPcb]
+   Generated File[SkateBoardPCB.TXT]
+   Generated File[SkateBoardPCB.LDP]
+   Generated File[SkateBoardPCB.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 18:36:57 On 15/01/2017
